@@ -1,0 +1,50 @@
+﻿@model Serie_2___Aufgabe_1.Models.Fahrzeug
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Fahrzeug</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hubraum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hubraum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarbId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarbId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HerstellerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HerstellerId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FahrzeugId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

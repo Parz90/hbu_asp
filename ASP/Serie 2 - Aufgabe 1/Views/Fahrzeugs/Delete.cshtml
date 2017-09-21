@@ -1,0 +1,56 @@
+﻿@model Serie_2___Aufgabe_1.Models.Fahrzeug
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Fahrzeug</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hubraum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hubraum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FarbId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FarbId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HerstellerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HerstellerId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

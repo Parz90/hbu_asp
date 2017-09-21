@@ -54,3 +54,4 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\EntityFramew
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\EntityFramework.SqlServer.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\EntityFramework.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\EntityFramework.SqlServer.xml
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\obj\Debug\Kap_04 - Models.csprojResolveAssemblyReference.cache
