@@ -9,5 +9,6 @@ namespace Serie_3___Aufgabe_1.Models
     {
         public virtual int HerausgeberId { get; set; }
         public virtual string Name { get; set; }
+        public virtual string WebsiteUrl { get; set; }
     }
 }

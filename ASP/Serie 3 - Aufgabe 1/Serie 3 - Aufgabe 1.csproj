@@ -159,6 +159,7 @@
     <Compile Include="Controllers\AlbumsController.cs" />
     <Compile Include="Controllers\ArtistsController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
+    <Compile Include="Controllers\HerausgebersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -224,6 +225,11 @@
     <Content Include="Views\Genres\Details.cshtml" />
     <Content Include="Views\Genres\Edit.cshtml" />
     <Content Include="Views\Genres\Index.cshtml" />
+    <Content Include="Views\Herausgebers\Details.cshtml" />
+    <Content Include="Views\Herausgebers\Index.cshtml" />
+    <Content Include="Views\Herausgebers\Create.cshtml" />
+    <Content Include="Views\Herausgebers\Edit.cshtml" />
+    <Content Include="Views\Herausgebers\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
