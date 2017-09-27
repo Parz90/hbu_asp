@@ -16,7 +16,7 @@ namespace Serie_3___Aufgabe_1.Controllers
         // GET: Herausgeber
         public ActionResult Index()
         {
-            return View();
+            return View(db.Herausgebers.ToList());
         }
 
         public ActionResult Details(int? id)
@@ -67,7 +67,7 @@ namespace Serie_3___Aufgabe_1.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Name, WebsiteUrl")] Herausgeber herausgeber)
+        public ActionResult Edit([Bind(Include = "HerausgeberId, Name, WebsiteUrl")] Herausgeber herausgeber)
         {
             if (ModelState.IsValid)
             {

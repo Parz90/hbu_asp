@@ -54,3 +54,4 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 1\bin\Antlr3.R
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 1\bin\Newtonsoft.Json.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 1\obj\Debug\Serie 3 - Aufgabe 1.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 1\obj\Debug\Serie 3 - Aufgabe 1.pdb
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 1\obj\Debug\Serie 3 - Aufgabe 1.csprojResolveAssemblyReference.cache

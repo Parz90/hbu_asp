@@ -17,7 +17,7 @@ namespace Serie_3___Aufgabe_1.Controllers
         // GET: Albums
         public ActionResult Index()
         {
-            var albums = db.Albums.Include(a => a.Artist).Include(a => a.Genre);
+            var albums = db.Albums.Include(a => a.Artist).Include(a => a.Genre).Include(a => a.Herausgeber);
             return View(albums.ToList());
         }
 
@@ -41,6 +41,7 @@ namespace Serie_3___Aufgabe_1.Controllers
         {
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
             ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name");
+            ViewBag.HerausgeberId = new SelectList(db.Herausgebers, "HerausgeberId","Name");
             return View();
         }
 
@@ -49,7 +50,7 @@ namespace Serie_3___Aufgabe_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
+        public ActionResult Create([Bind(Include = "AlbumId,GenreId,ArtistId,HerausgeberId,Title,Price,AlbumArtUrl")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -60,6 +61,7 @@ namespace Serie_3___Aufgabe_1.Controllers
 
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
             ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
+            ViewBag.HerausgeberId = new SelectList(db.Herausgebers, "HerausgeberID", "Name", album.HerausgeberId);
             return View(album);
         }
 
@@ -77,6 +79,7 @@ namespace Serie_3___Aufgabe_1.Controllers
             }
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
             ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
+            ViewBag.HerausgeberId = new SelectList(db.Herausgebers, "HerausgeberId", "Name", album.HerausgeberId);
             return View(album);
         }
 
@@ -85,7 +88,7 @@ namespace Serie_3___Aufgabe_1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")] Album album)
+        public ActionResult Edit([Bind(Include = "AlbumId,GenreId,ArtistId,HerausgeberId,Title,Price,AlbumArtUrl")] Album album)
         {
             if (ModelState.IsValid)
             {
@@ -95,6 +98,7 @@ namespace Serie_3___Aufgabe_1.Controllers
             }
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name", album.ArtistId);
             ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", album.GenreId);
+            ViewBag.HerausgeberId = new SelectList(db.Herausgebers, "HerausgeberId", "Name", album.HerausgeberId);
             return View(album);
         }
 
