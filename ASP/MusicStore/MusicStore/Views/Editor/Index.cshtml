@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MusicStore.Models.Editor>
+@{
+    ViewBag.Title = "Editor List";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Neues Element erstellen", "Create")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Name")
+            </th>
+            <th>
+                @Html.DisplayName("WebsiteUrl")
+            </th>
+            <th>
+                @*Empty Row for edit/details/delete*@
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var editor in Model)
+        {
+            <tr>
+                <td>
+                    @editor.Name
+                </td>
+
+                <td>
+                    <a href="@editor.WebsiteUrl" target="_blank">@editor.WebsiteUrl</a>
+                </td>
+                
+                <td>
+                    @Html.ActionLink("Editieren", "Edit", new { id = editor.EditorId }) |
+                    @Html.ActionLink("Löschen", "Delete", new { id = editor.EditorId })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

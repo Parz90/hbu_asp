@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Serie_3___Aufgabe_2;
 using Serie_3___Aufgabe_2.Models;
 
 namespace Serie_3___Aufgabe_2.Controllers
@@ -21,7 +22,7 @@ namespace Serie_3___Aufgabe_2.Controllers
         }
 
         // GET: Spraches/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -59,7 +60,7 @@ namespace Serie_3___Aufgabe_2.Controllers
         }
 
         // GET: Spraches/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -90,7 +91,7 @@ namespace Serie_3___Aufgabe_2.Controllers
         }
 
         // GET: Spraches/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -107,7 +108,7 @@ namespace Serie_3___Aufgabe_2.Controllers
         // POST: Spraches/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             Sprache sprache = db.Spraches.Find(id);
             db.Spraches.Remove(sprache);

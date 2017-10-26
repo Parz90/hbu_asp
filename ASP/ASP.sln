@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serie 3 - Aufgabe 1", "Seri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serie 3 - Aufgabe 2", "Serie 3 - Aufgabe 2\Serie 3 - Aufgabe 2.csproj", "{3E940F52-AE37-4C78-8DFD-D6A7C9698C0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSelectBsp1", "MultiSelectBsp1\MultiSelectBsp1.csproj", "{0007EA81-1F73-41ED-9EE8-202E47531297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicStore", "MusicStore\MusicStore.csproj", "{45E00205-EF16-4E6E-B7AA-AD1D00063873}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{3E940F52-AE37-4C78-8DFD-D6A7C9698C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E940F52-AE37-4C78-8DFD-D6A7C9698C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E940F52-AE37-4C78-8DFD-D6A7C9698C0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0007EA81-1F73-41ED-9EE8-202E47531297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0007EA81-1F73-41ED-9EE8-202E47531297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0007EA81-1F73-41ED-9EE8-202E47531297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0007EA81-1F73-41ED-9EE8-202E47531297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45E00205-EF16-4E6E-B7AA-AD1D00063873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45E00205-EF16-4E6E-B7AA-AD1D00063873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45E00205-EF16-4E6E-B7AA-AD1D00063873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45E00205-EF16-4E6E-B7AA-AD1D00063873}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

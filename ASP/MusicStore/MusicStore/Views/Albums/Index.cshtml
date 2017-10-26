@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MusicStore.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AlbumArtUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Artist.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Genre.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Languages)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr style="height:60px;">
+        <td style="vertical-align:middle;">
+            <img src="@item.AlbumArtUrl" alt="Album Art" style="max-height:50px; max-width:50px;"/>
+        </td>
+        <td style="vertical-align:middle;">
+            @Html.DisplayFor(modelItem => item.Artist.Name)
+        </td>
+        <td style="vertical-align:middle;">
+            @Html.DisplayFor(modelItem => item.Genre.Name)
+        </td>
+        <td style="vertical-align:middle;">
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td style="vertical-align:middle;">
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+       
+        <td style="vertical-align:middle;">
+            @foreach (var lang in item.Languages)
+            {
+                <p>@lang.Name</p>
+                
+            }
+            
+        </td>
+        <td style="vertical-align:middle;">
+            @Html.ActionLink("Edit", "Edit", new { id=item.AlbumId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlbumId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlbumId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -7,6 +7,11 @@ namespace Serie_3___Aufgabe_2.Models
 {
     public class Album
     {
+        public Album()
+        {
+            this.Sprache = new List<Sprache>();
+        }
+
         public virtual int AlbumId { get; set; }
         public virtual int GenreId { get; set; }
         public virtual int ArtistId { get; set; }
@@ -18,7 +23,7 @@ namespace Serie_3___Aufgabe_2.Models
         public virtual Genre Genre { get; set; }
         public virtual Artist Artist { get; set; }
         public virtual Herausgeber Herausgeber { get; set; }
-        public virtual List<Sprache> Sprache { get; set; }
+        public virtual ICollection<Sprache> Sprache { get; set; }
 
     }
 }

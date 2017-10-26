@@ -12,7 +12,8 @@ namespace Serie_3___Aufgabe_2
     {
         protected void Application_Start()
         {
-            System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseAlways<Serie3Aufgabe2Context>());
+            //System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseAlways<Serie3Aufgabe2Context>());
+            System.Data.Entity.Database.SetInitializer<Serie3Aufgabe2Context>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
