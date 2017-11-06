@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuthTest", "OAuthTest\OAut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serie 5 - Aufgabe 1", "Serie 5 - Aufgabe 1\Serie 5 - Aufgabe 1.csproj", "{A4147392-2684-44A3-ACCC-CCEEB1DB3D34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly", "Vildy\Vidly.csproj", "{2AB81C3E-048A-4D47-B6A8-0B459A5FE8C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{A4147392-2684-44A3-ACCC-CCEEB1DB3D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4147392-2684-44A3-ACCC-CCEEB1DB3D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4147392-2684-44A3-ACCC-CCEEB1DB3D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB81C3E-048A-4D47-B6A8-0B459A5FE8C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB81C3E-048A-4D47-B6A8-0B459A5FE8C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB81C3E-048A-4D47-B6A8-0B459A5FE8C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB81C3E-048A-4D47-B6A8-0B459A5FE8C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
