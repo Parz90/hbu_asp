@@ -57,4 +57,3 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Vildy\bin\de\System.Web.WebPages
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Vildy\bin\de\System.Web.WebPages.Razor.resources.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Vildy\obj\Debug\Vildy.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Vildy\obj\Debug\Vildy.pdb
-C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Vildy\obj\Debug\Vidly.csprojResolveAssemblyReference.cache

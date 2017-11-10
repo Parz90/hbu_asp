@@ -13,13 +13,7 @@ namespace Vildy
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            //routes.MapMvcAttributeRoutes();
-
-            routes.MapRoute(
-                "MoviesByReleaseDate", 
-                "movies/released/{year}/{month}", 
-                new { controller = "Movies", action = "ByReleaseDate"},
-                new { year = @"2016|2017", month = @"\d{2}" });
+            routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(
                 name: "Default",
