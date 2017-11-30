@@ -54,3 +54,11 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\Antlr3.R
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\Newtonsoft.Json.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\obj\Debug\Serie 3 - Aufgabe 2.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\obj\Debug\Serie 3 - Aufgabe 2.pdb
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\de\System.Web.Helpers.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\de\System.Web.Mvc.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\de\System.Web.Optimization.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\de\System.Web.Razor.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\de\System.Web.WebPages.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\de\System.Web.WebPages.Deployment.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\bin\de\System.Web.WebPages.Razor.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 3 - Aufgabe 2\obj\Debug\Serie 3 - Aufgabe 2.csprojResolveAssemblyReference.cache

@@ -55,3 +55,10 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\EntityFramew
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\EntityFramework.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\EntityFramework.SqlServer.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\obj\Debug\Kap_04 - Models.csprojResolveAssemblyReference.cache
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\de\System.Web.Helpers.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\de\System.Web.Mvc.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\de\System.Web.Optimization.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\de\System.Web.Razor.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\de\System.Web.WebPages.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\de\System.Web.WebPages.Deployment.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Kap_04 - Models\bin\de\System.Web.WebPages.Razor.resources.dll

@@ -54,3 +54,4 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MultiSelectBsp1\bin\Antlr3.Runti
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MultiSelectBsp1\bin\Newtonsoft.Json.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MultiSelectBsp1\obj\Debug\MultiSelectBsp1.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MultiSelectBsp1\obj\Debug\MultiSelectBsp1.pdb
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MultiSelectBsp1\obj\Debug\MultiSelectBsp1.csprojResolveAssemblyReference.cache

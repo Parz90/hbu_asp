@@ -82,3 +82,10 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\Microsoft.Owin.Security.
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\obj\Debug\ASP.csprojResolveAssemblyReference.cache
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\obj\Debug\ASP.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\obj\Debug\ASP.pdb
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\de\System.Web.Helpers.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\de\System.Web.Mvc.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\de\System.Web.Optimization.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\de\System.Web.Razor.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\de\System.Web.WebPages.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\de\System.Web.WebPages.Deployment.resources.dll
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\ASP\bin\de\System.Web.WebPages.Razor.resources.dll

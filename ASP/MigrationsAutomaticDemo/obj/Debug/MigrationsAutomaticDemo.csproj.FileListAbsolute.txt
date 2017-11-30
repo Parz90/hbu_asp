@@ -1,1 +1,6 @@
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MigrationsAutomaticDemo\bin\Debug\MigrationsAutomaticDemo.exe.config
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MigrationsAutomaticDemo\bin\Debug\MigrationsAutomaticDemo.exe
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MigrationsAutomaticDemo\bin\Debug\MigrationsAutomaticDemo.pdb
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MigrationsAutomaticDemo\obj\Debug\MigrationsAutomaticDemo.csprojResolveAssemblyReference.cache
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MigrationsAutomaticDemo\obj\Debug\MigrationsAutomaticDemo.exe
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\MigrationsAutomaticDemo\obj\Debug\MigrationsAutomaticDemo.pdb
