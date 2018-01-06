@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serie 5 - Aufgabe 5", "Seri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootingTrail1", "RootingTrail1\RootingTrail1.csproj", "{949ED0A9-53EB-46C4-9712-EFA65EA822E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPITrail1", "WebAPITrail1\WebAPITrail1.csproj", "{B0DA944E-74F3-485C-9F7A-BB802118AA1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{949ED0A9-53EB-46C4-9712-EFA65EA822E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{949ED0A9-53EB-46C4-9712-EFA65EA822E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{949ED0A9-53EB-46C4-9712-EFA65EA822E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0DA944E-74F3-485C-9F7A-BB802118AA1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0DA944E-74F3-485C-9F7A-BB802118AA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0DA944E-74F3-485C-9F7A-BB802118AA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0DA944E-74F3-485C-9F7A-BB802118AA1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
