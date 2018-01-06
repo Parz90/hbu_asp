@@ -43,6 +43,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RootingTrail1", "RootingTra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPITrail1", "WebAPITrail1\WebAPITrail1.csproj", "{B0DA944E-74F3-485C-9F7A-BB802118AA1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginRegistrationTrail", "LoginRegistrationTrail\LoginRegistrationTrail.csproj", "{4AC0F70F-B720-4E89-9886-27CA8B8C7F4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoleTrail1", "RoleTrail1\RoleTrail1.csproj", "{1D8482D5-A429-47F3-AACA-60AA3FC367F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +133,14 @@ Global
 		{B0DA944E-74F3-485C-9F7A-BB802118AA1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0DA944E-74F3-485C-9F7A-BB802118AA1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0DA944E-74F3-485C-9F7A-BB802118AA1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC0F70F-B720-4E89-9886-27CA8B8C7F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC0F70F-B720-4E89-9886-27CA8B8C7F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC0F70F-B720-4E89-9886-27CA8B8C7F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC0F70F-B720-4E89-9886-27CA8B8C7F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D8482D5-A429-47F3-AACA-60AA3FC367F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D8482D5-A429-47F3-AACA-60AA3FC367F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D8482D5-A429-47F3-AACA-60AA3FC367F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D8482D5-A429-47F3-AACA-60AA3FC367F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

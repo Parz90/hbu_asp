@@ -99,3 +99,4 @@ C:\Users\Parz\Documents\HFU\ASP\ASP\WebAPITrail1\bin\EntityFramework.dll
 C:\Users\Parz\Documents\HFU\ASP\ASP\WebAPITrail1\bin\EntityFramework.SqlServer.dll
 C:\Users\Parz\Documents\HFU\ASP\ASP\WebAPITrail1\bin\EntityFramework.xml
 C:\Users\Parz\Documents\HFU\ASP\ASP\WebAPITrail1\bin\EntityFramework.SqlServer.xml
+C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\WebAPITrail1\obj\Debug\WebAPITrail1.csprojResolveAssemblyReference.cache

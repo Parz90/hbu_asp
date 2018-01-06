@@ -48,7 +48,6 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller\bin\System.Web.WebPages.Razor.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller\bin\Antlr3.Runtime.pdb
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller\bin\Newtonsoft.Json.xml
-C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller\obj\Debug\Serie 1 - Aufgabe 1 - Controller.csprojResolveAssemblyReference.cache
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller\obj\Debug\Serie 1 - Aufgabe 1 - Controller.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller\obj\Debug\Serie 1 - Aufgabe 1 - Controller.pdb
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\ASP\Serie 1 - Aufgabe 1 - Controller\bin\de\System.Web.Helpers.resources.dll
