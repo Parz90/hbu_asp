@@ -29,5 +29,11 @@ namespace Spielzeugverleih.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Spielzeugverleih.Models.Toy> Toys { get; set; }
+
+        public System.Data.Entity.DbSet<Spielzeugverleih.Models.Reservation> Reservations { get; set; }
+
+        public System.Data.Entity.DbSet<Spielzeugverleih.Models.Condition> Conditions { get; set; }
     }
 }

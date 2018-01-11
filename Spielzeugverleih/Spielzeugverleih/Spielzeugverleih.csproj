@@ -196,15 +196,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConditionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\ToysController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Condition.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Toy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -270,6 +277,21 @@
     <Content Include="Views\Role\AssignRoleToUser.cshtml" />
     <Content Include="Views\Role\Create.cshtml" />
     <Content Include="Views\Account\RegisterRole.cshtml" />
+    <Content Include="Views\Toys\Create.cshtml" />
+    <Content Include="Views\Toys\Delete.cshtml" />
+    <Content Include="Views\Toys\Details.cshtml" />
+    <Content Include="Views\Toys\Edit.cshtml" />
+    <Content Include="Views\Toys\Index.cshtml" />
+    <Content Include="Views\Reservations\Create.cshtml" />
+    <Content Include="Views\Reservations\Delete.cshtml" />
+    <Content Include="Views\Reservations\Details.cshtml" />
+    <Content Include="Views\Reservations\Edit.cshtml" />
+    <Content Include="Views\Reservations\Index.cshtml" />
+    <Content Include="Views\Conditions\Create.cshtml" />
+    <Content Include="Views\Conditions\Delete.cshtml" />
+    <Content Include="Views\Conditions\Details.cshtml" />
+    <Content Include="Views\Conditions\Edit.cshtml" />
+    <Content Include="Views\Conditions\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

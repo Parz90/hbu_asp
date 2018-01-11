@@ -1,0 +1,74 @@
+﻿@model Spielzeugverleih.Models.Reservation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reservation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Toy.ArticleNr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Toy.ArticleNr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationUserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationUserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.From)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.From)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.To)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.To)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pickup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pickup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Return)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Return)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReservationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
