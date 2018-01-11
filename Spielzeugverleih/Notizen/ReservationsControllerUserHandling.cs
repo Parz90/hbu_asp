@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -18,7 +18,7 @@ namespace Spielzeugverleih.Controllers
         // GET: Reservations
         public ActionResult Index()
         {
-            var reservations = db.Reservations.Include(r => r.ApplicationUser).Include(r => r.Toy);
+            var reservations = db.Reservations.Include(r => r.Toy);
             return View(reservations.ToList());
         }
 
@@ -40,8 +40,8 @@ namespace Spielzeugverleih.Controllers
         // GET: Reservations/Create
         public ActionResult Create()
         {
+
             ViewBag.Username = this.User.Identity.GetUserName();
-            ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email");
             ViewBag.ToyId = new SelectList(db.Toys, "ToyId", "ArticleNr");
             return View();
         }
@@ -61,7 +61,6 @@ namespace Spielzeugverleih.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email", reservation.ApplicationUserId);
             ViewBag.ToyId = new SelectList(db.Toys, "ToyId", "ArticleNr", reservation.ToyId);
             return View(reservation);
         }
@@ -78,7 +77,6 @@ namespace Spielzeugverleih.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email", reservation.ApplicationUserId);
             ViewBag.ToyId = new SelectList(db.Toys, "ToyId", "ArticleNr", reservation.ToyId);
             return View(reservation);
         }
@@ -96,7 +94,6 @@ namespace Spielzeugverleih.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email", reservation.ApplicationUserId);
             ViewBag.ToyId = new SelectList(db.Toys, "ToyId", "ArticleNr", reservation.ToyId);
             return View(reservation);
         }
