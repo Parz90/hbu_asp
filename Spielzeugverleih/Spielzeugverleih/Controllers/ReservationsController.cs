@@ -11,11 +11,14 @@ using Microsoft.AspNet.Identity;
 
 namespace Spielzeugverleih.Controllers
 {
+    [Authorize]
     public class ReservationsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+        int tempToyId;
 
         // GET: Reservations
+        [Authorize(Roles = "Admin")]
         public ActionResult Index()
         {
             var reservations = db.Reservations.Include(r => r.ApplicationUser).Include(r => r.Toy);
@@ -23,6 +26,7 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Reservations/Details/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -38,11 +42,24 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Reservations/Create
-        public ActionResult Create()
+        /*public ActionResult Create()
         {
             ViewBag.Username = this.User.Identity.GetUserName();
             ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email");
             ViewBag.ToyId = new SelectList(db.Toys, "ToyId", "ArticleNr");
+            return View();
+        }
+        */
+
+        // GET: Reservations/Create
+        public ActionResult Create(int id)
+        {
+            ViewBag.Username = this.User.Identity.GetUserName();
+            ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email");
+            ViewBag.ToyName = db.Toys.Find(id).Title;
+            ViewBag.ToyId = db.Toys.Find(id).ToyId;
+            tempToyId = db.Toys.Find(id).ToyId;
+
             return View();
         }
 
@@ -56,8 +73,18 @@ namespace Spielzeugverleih.Controllers
             if (ModelState.IsValid)
             {
                 reservation.ApplicationUserId = this.User.Identity.GetUserId();
+                reservation.ToyId = tempToyId;
+                var From = reservation.From;
+                var toylist = db.Reservations.Where(r => r.ToyId == reservation.ToyId).ToList();
+                var reservedToy = toylist.Where(t => t.From > reservation.From && t.To < reservation.To);
+                /*if (reservedToy != null && reservedToy.Any())
+                {
+                    db.Reservations.Add(reservation);
+                    db.SaveChanges();
+                }*/
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 
@@ -67,6 +94,7 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Reservations/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -88,6 +116,7 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit([Bind(Include = "ReservationId,ToyId,ApplicationUserId,Description,From,To,Pickup,Return")] Reservation reservation)
         {
             if (ModelState.IsValid)
@@ -102,6 +131,7 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Reservations/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -119,6 +149,7 @@ namespace Spielzeugverleih.Controllers
         // POST: Reservations/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Reservation reservation = db.Reservations.Find(id);

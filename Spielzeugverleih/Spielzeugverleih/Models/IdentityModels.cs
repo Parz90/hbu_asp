@@ -36,6 +36,6 @@ namespace Spielzeugverleih.Models
 
         public System.Data.Entity.DbSet<Spielzeugverleih.Models.Reservation> Reservations { get; set; }
 
-        //public System.Data.Entity.DbSet<Spielzeugverleih.Models.ApplicationUser> ApplicationUsers { get; set; }
+        public System.Data.Entity.DbSet<Spielzeugverleih.Models.ToyPic> ToyPictures { get; set; }
     }
 }

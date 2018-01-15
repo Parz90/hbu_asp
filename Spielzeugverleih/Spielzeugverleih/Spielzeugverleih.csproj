@@ -201,6 +201,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\ToyPicturesController.cs" />
     <Compile Include="Controllers\ToysController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -209,6 +210,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Condition.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ToyPic.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Models\Toy.cs" />
@@ -292,9 +294,15 @@
     <Content Include="Views\Conditions\Details.cshtml" />
     <Content Include="Views\Conditions\Edit.cshtml" />
     <Content Include="Views\Conditions\Index.cshtml" />
+    <Content Include="Views\ToyPictures\Create.cshtml" />
+    <Content Include="Views\ToyPictures\Delete.cshtml" />
+    <Content Include="Views\ToyPictures\Details.cshtml" />
+    <Content Include="Views\ToyPictures\Edit.cshtml" />
+    <Content Include="Views\ToyPictures\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

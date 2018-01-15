@@ -27,7 +27,7 @@
             @Html.DisplayNameFor(model => model.Price)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ImagePath)
+            <b>Image</b>
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Active)
@@ -56,7 +56,8 @@
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ImagePath)
+            <img height="100" width="100" src="data:image;base64,@Convert.ToBase64String(item.ToyPic.Picture)" />
+            
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Active)
@@ -67,7 +68,8 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ToyId }) |
             @Html.ActionLink("Details", "Details", new { id=item.ToyId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ToyId })
+            @Html.ActionLink("Delete", "Delete", new { id = item.ToyId }) |
+            @Html.ActionLink("Reservieren", "Create", "Reservations", new { id = item.ToyId }, null)
         </td>
     </tr>
 }
