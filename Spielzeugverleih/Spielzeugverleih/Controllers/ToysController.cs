@@ -37,11 +37,10 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Toys/Create
-        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description");
-            ViewBag.ToyPicId = new SelectList(db.ToyPictures, "ToyPicId", "ToyPicId");
+            ViewBag.ToyPicID = new MultiSelectList(db.ToyPictures, "ToyPicId", "Picture");
             return View();
         }
 
@@ -50,7 +49,7 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ToyId,ConditionId,ArticleNr,Title,Description,Price,ImagePath,Active,Available")] Toy toy)
+        public ActionResult Create([Bind(Include = "ToyId,ConditionId,ArticleNr,ToyPicId,Title,Description,Price,Active,Available")] Toy toy)
         {
             if (ModelState.IsValid)
             {
@@ -64,7 +63,6 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Toys/Edit/5
-        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,8 +83,7 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
-        public ActionResult Edit([Bind(Include = "ToyId,ConditionId,ArticleNr,Title,Description,Price,ImagePath,Active,Available")] Toy toy)
+        public ActionResult Edit([Bind(Include = "ToyId,ConditionId,ArticleNr,ToyPicId,Title,Description,Price,Active,Available")] Toy toy)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +96,6 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Toys/Delete/5
-        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -117,7 +113,6 @@ namespace Spielzeugverleih.Controllers
         // POST: Toys/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Toy toy = db.Toys.Find(id);
