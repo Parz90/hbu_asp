@@ -34,7 +34,7 @@ namespace Spielzeugverleih.Controllers
                 toys.Add(toy);
             }
             */
-            return View(db.ToyPictures.ToList());
+            return View(db.ToyPics.ToList());
         }
 
         // GET: ToyPictures/Details/5
@@ -44,7 +44,7 @@ namespace Spielzeugverleih.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ToyPic toyPicture = db.ToyPictures.Find(id);
+            ToyPic toyPicture = db.ToyPics.Find(id);
             if (toyPicture == null)
             {
                 return HttpNotFound();
@@ -72,9 +72,9 @@ namespace Spielzeugverleih.Controllers
                     MemoryStream target = new MemoryStream();
                     file.InputStream.CopyTo(target);
                     toyPicture.Picture = target.ToArray();
-                    toyPicture.ImagePath = Path.GetFileName(file.FileName);
+                    //toyPicture.ImagePath = Path.GetFileName(file.FileName);
 
-                    db.ToyPictures.Add(toyPicture);
+                    db.ToyPics.Add(toyPicture);
                     db.SaveChanges();
                     ViewBag.UploadSuccess = true;
                     return RedirectToAction("Index");
@@ -92,7 +92,7 @@ namespace Spielzeugverleih.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ToyPic toyPicture = db.ToyPictures.Find(id);
+            ToyPic toyPicture = db.ToyPics.Find(id);
             if (toyPicture == null)
             {
                 return HttpNotFound();
@@ -123,7 +123,7 @@ namespace Spielzeugverleih.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ToyPic toyPicture = db.ToyPictures.Find(id);
+            ToyPic toyPicture = db.ToyPics.Find(id);
             if (toyPicture == null)
             {
                 return HttpNotFound();
@@ -136,8 +136,8 @@ namespace Spielzeugverleih.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ToyPic toyPicture = db.ToyPictures.Find(id);
-            db.ToyPictures.Remove(toyPicture);
+            ToyPic toyPicture = db.ToyPics.Find(id);
+            db.ToyPics.Remove(toyPicture);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

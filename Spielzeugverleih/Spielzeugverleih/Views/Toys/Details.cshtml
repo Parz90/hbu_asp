@@ -27,12 +27,24 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.ToyPicId)
+            @*@Html.DisplayNameFor(model => model.ToyPicListId)*@BLA BLA
         </dt>
 
         <dd>
-            <img height="100" width="100" src="data:image;base64,@Convert.ToBase64String(Model.ToyPicList.FirstOrDefault().Picture)" />
-            @Html.DisplayFor(model => model.ToyPicId)
+            <table>
+                <tr>
+                    @foreach (var image in Model.ToyPicList)
+                    {
+
+                        <td width="130px">
+                            <img height="100" width="100" src="data:image;base64,@Convert.ToBase64String(image.Picture)" />
+                            @*<img src="@Url.Action("Index", "Images", new { id = image.Id })" style="max-height:100px; max-width:100px;" />*@
+                        </td>
+
+                    }
+                </tr>
+            </table>
+            @*<img height="100" width="100" src="data:image;base64,@Convert.ToBase64String(image.Picture)" />*@
         </dd>
 
         <dt>

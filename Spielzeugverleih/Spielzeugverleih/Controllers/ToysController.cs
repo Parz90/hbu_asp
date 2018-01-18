@@ -40,7 +40,11 @@ namespace Spielzeugverleih.Controllers
         public ActionResult Create()
         {
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description");
-            ViewBag.ToyPicID = new MultiSelectList(db.ToyPictures, "ToyPicId", "Picture");
+            //ViewBag.ToyPicList = new SelectList(db.ToyPics, "ToyPicId", "Picture");
+ 
+            ViewBag.PictureList = new List<ToyPic>(db.ToyPics.ToList());
+            ViewBag.MultiSelectPictureList = new MultiSelectList(db.ToyPics.ToList(), "ToyPicId", "Picture");
+
             return View();
         }
 
@@ -49,16 +53,42 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ToyId,ConditionId,ArticleNr,ToyPicId,Title,Description,Price,Active,Available")] Toy toy)
+        //public ActionResult Create([Bind(Include = "ToyId,ConditionId,ArticleNr,files,Title,Description,Price,Active,Available")] Toy toy)
+        public ActionResult Create(Toy toy)
         {
             if (ModelState.IsValid)
             {
+
+                foreach (HttpPostedFileBase file in toy.files)
+                {
+                    //Checking file is available to save.  
+                    if (file != null)
+                    {
+                        using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+                        {
+                            file.InputStream.CopyTo(ms);
+
+                            var toyPic = new ToyPic()
+                            {
+                                Toy = toy,
+                                Picture = ms.ToArray()
+                            };
+
+                            if (toy.ToyPicList == null)
+                                toy.ToyPicList = new List<ToyPic>();
+                            toy.ToyPicList.Add(toyPic);
+                        }
+                    }
+
+                }
+
                 db.Toys.Add(toy);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description", toy.ConditionId);
+            //ViewBag.ToyPicList = new SelectList(db.ToyPics, "ToyPicId", "Picture", toy.ToyPicListId);
             return View(toy);
         }
 
@@ -83,7 +113,7 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ToyId,ConditionId,ArticleNr,ToyPicId,Title,Description,Price,Active,Available")] Toy toy)
+        public ActionResult Edit([Bind(Include = "ToyId,ConditionId,ArticleNr,ToyPicListId,Title,Description,Price,Active,Available")] Toy toy)
         {
             if (ModelState.IsValid)
             {

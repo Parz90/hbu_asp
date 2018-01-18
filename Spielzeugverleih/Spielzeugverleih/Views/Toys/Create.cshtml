@@ -2,15 +2,18 @@
 
 @{
     ViewBag.Title = "Create";
+    //var pictureList = ViewBag.PictureList;
+    //var multiSelectPictureList = (IEnumerable<SelectListItem>)ViewBag.MultiSelectPictureList;
 }
+
 
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Toys", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Toy</h4>
         <hr />
@@ -32,12 +35,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ToyPicId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.files, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.ListBox("ToyPicList", (MultiSelectList)ViewBag.ToyPicId, new { size = 8 })
-                
-                @Html.ValidationMessageFor(model => model.ToyPicId, "", new { @class = "text-danger" })
-            </div>
+                @*@Html.ListBox("Picture", multiSelectPictureList, new { size = 8 })*@
+                @Html.TextBoxFor(model => model.files, "", new { @type = "file", @multiple = "multiple" })
+           </div>
         </div>
 
         <div class="form-group">
