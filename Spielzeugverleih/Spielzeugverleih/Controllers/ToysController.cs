@@ -130,16 +130,20 @@ namespace Spielzeugverleih.Controllers
                             var toyPic = new ToyPic()
                             {
                                 Toy = toy,
+                                ToyId = toy.ToyId,
                                 Picture = ms.ToArray()
                             };
 
                             if (toy.ToyPicList == null)
+                            {
                                 toy.ToyPicList = new List<ToyPic>();
-                            toy.ToyPicList.Add(toyPic);
+                            }
+                            db.ToyPics.Add(toyPic);
                         }
                     }
 
                 }
+                
                 db.Entry(toy).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

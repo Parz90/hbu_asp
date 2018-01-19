@@ -36,5 +36,15 @@ namespace Spielzeugverleih.Models
 
         [NotMapped]
         public HttpPostedFileBase[] files { get; set; }
+
+ 
+        [DisplayName("Von")]
+        [DataType(DataType.Date)]
+        public virtual DateTime From { get; set; }
+
+
+        [DisplayName("Bis")]
+        [DataType(DataType.Date)]
+        public virtual DateTime To { get; set; }
     }
 }
