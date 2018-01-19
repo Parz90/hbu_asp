@@ -29,6 +29,7 @@ namespace Spielzeugverleih.Models
         public virtual bool Active { get; set; }
 
         public virtual Condition Condition { get; set; }
+        [DisplayName("Bilder")]
         public virtual ICollection<ToyPic> ToyPicList { get; set; }
         public virtual bool Available { get; set; }
 

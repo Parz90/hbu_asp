@@ -113,10 +113,33 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ToyId,ConditionId,ArticleNr,ToyPicListId,Title,Description,Price,Active,Available")] Toy toy)
+        //public ActionResult Edit([Bind(Include = "ToyId,ConditionId,ArticleNr,files,Title,Description,Price,Active,Available")] Toy toy)
+        public ActionResult Edit(Toy toy)
         {
             if (ModelState.IsValid)
             {
+                foreach (HttpPostedFileBase file in toy.files)
+                {
+                    //Checking file is available to save.  
+                    if (file != null)
+                    {
+                        using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+                        {
+                            file.InputStream.CopyTo(ms);
+
+                            var toyPic = new ToyPic()
+                            {
+                                Toy = toy,
+                                Picture = ms.ToArray()
+                            };
+
+                            if (toy.ToyPicList == null)
+                                toy.ToyPicList = new List<ToyPic>();
+                            toy.ToyPicList.Add(toyPic);
+                        }
+                    }
+
+                }
                 db.Entry(toy).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

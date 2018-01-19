@@ -2,8 +2,6 @@
 
 @{
     ViewBag.Title = "Create";
-    //var pictureList = ViewBag.PictureList;
-    //var multiSelectPictureList = (IEnumerable<SelectListItem>)ViewBag.MultiSelectPictureList;
 }
 
 
@@ -37,7 +35,6 @@
         <div class="form-group">
             @Html.LabelFor(model => model.files, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @*@Html.ListBox("Picture", multiSelectPictureList, new { size = 8 })*@
                 @Html.TextBoxFor(model => model.files, "", new { @type = "file", @multiple = "multiple" })
            </div>
         </div>

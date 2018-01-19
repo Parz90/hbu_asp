@@ -15,7 +15,6 @@ namespace Spielzeugverleih.Controllers
     public class ReservationsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        int tempToyId;
 
         // GET: Reservations
         [Authorize(Roles = "Admin")]
@@ -54,13 +53,21 @@ namespace Spielzeugverleih.Controllers
         // GET: Reservations/Create
         public ActionResult Create(int id)
         {
-            ViewBag.Username = this.User.Identity.GetUserName();
-            ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email");
-            ViewBag.ToyName = db.Toys.Find(id).Title;
-            ViewBag.ToyId = db.Toys.Find(id).ToyId;
-            tempToyId = db.Toys.Find(id).ToyId;
+            List<Reservation> reservations = new List<Reservation>();
+            reservations = db.Reservations.ToList();
+            foreach (var res in reservations)
+            {
+                if (res.ToyId == id)
+                {
+                    return RedirectToAction("Index", "Toys");
+                }
 
-            return View();
+            }
+            Reservation reservation = new Reservation();
+            reservation.ToyId = db.Toys.Find(id).ToyId;
+            reservation.ApplicationUserId = this.User.Identity.GetUserId();
+
+            return View(reservation);
         }
 
         // POST: Reservations/Create
@@ -72,8 +79,6 @@ namespace Spielzeugverleih.Controllers
         {
             if (ModelState.IsValid)
             {
-                reservation.ApplicationUserId = this.User.Identity.GetUserId();
-                reservation.ToyId = tempToyId;
                 var From = reservation.From;
                 var toylist = db.Reservations.Where(r => r.ToyId == reservation.ToyId).ToList();
                 var reservedToy = toylist.Where(t => t.From > reservation.From && t.To < reservation.To);

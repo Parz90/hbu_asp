@@ -18,7 +18,7 @@
             @Html.DisplayNameFor(model => model.ArticleNr)
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.ToyPicListId)*@blab blA...
+            @Html.DisplayNameFor(model => model.ToyPicList)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Title)
@@ -70,7 +70,8 @@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ToyId }) |
             @Html.ActionLink("Details", "Details", new { id=item.ToyId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ToyId })
+            @Html.ActionLink("Delete", "Delete", new { id=item.ToyId }) |
+            @Html.ActionLink("Reservieren", "Create", "Reservations", new { id = item.ToyId }, null)
         </td>
     </tr>
 }
