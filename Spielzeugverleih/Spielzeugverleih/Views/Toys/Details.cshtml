@@ -68,25 +68,12 @@
             @Html.DisplayFor(model => model.Price)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Active)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Active)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Available)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Available)
-        </dd>
-
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ToyId }) |
+    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ToyId }) @:|
+    }
     @Html.ActionLink("Back to List", "Index")
 </p>

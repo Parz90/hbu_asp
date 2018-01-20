@@ -3,29 +3,30 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Toy Rental</h1>
+    <p class="lead">Welcome to our Toy Rental Online Page. In our website, you havethe possibilitiy to see all available toys without beeing in our store. The states and the availability of the toys is always up to date. (Below are all possible MLZ szenarios listed)</p>
+    <p>@Html.ActionLink("Sign Up Now", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" , @class = "btn btn-primary btn-lg" }) &raquo;</p>
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Szenario 1</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            As an unregistered user, you have the possibility to surf in our Web Page. As a unregistered user, you can see all available toys and you can also see toy details.
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("See our Toys", "Index", "Toys", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary btn-lg" }) &raquo;</p>
+
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Szenarios 2</h2>
+        <p>As a registered user, you have the possibility to surf in our Web Page, see all available toys and it's details. Additionally, you can do an online reservation of the available toys.</p>
+        <p>@Html.ActionLink("Login Now", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary btn-lg" }) &raquo;</p>
+
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Szenario 3</h2>
+        <p>As an administrator, you have the control over all possible functionalities in your online toy rental. As an administrator, you have the authorization to manage toys, conditions, pictures, reservations, etc. (Only visible, because MLZ!!! Admin user is admin@gmail.com -> PW: @@Dministrator1)</p>
+        <p>@Html.ActionLink("Login Now", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-primary btn-lg" }) &raquo;</p>
+
     </div>
 </div>

@@ -299,6 +299,10 @@
     <Content Include="Views\ToyPictures\Details.cshtml" />
     <Content Include="Views\ToyPictures\Edit.cshtml" />
     <Content Include="Views\ToyPictures\Index.cshtml" />
+    <Content Include="Views\Conditions\RejectDelete.cshtml" />
+    <Content Include="Views\Toys\RejectDelete.cshtml" />
+    <Content Include="Views\Reservations\RejectReservation.cshtml" />
+    <Content Include="Views\Toys\NoCond.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

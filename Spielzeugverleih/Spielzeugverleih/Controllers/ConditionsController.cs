@@ -102,6 +102,15 @@ namespace Spielzeugverleih.Controllers
             {
                 return HttpNotFound();
             }
+            var toys = db.Toys.ToList();
+            foreach (var toy in toys)
+            {
+                if (toy.ConditionId == id)
+                {
+                    return RedirectToAction("RejectDelete");
+                }
+
+            }
             return View(condition);
         }
 
@@ -114,6 +123,12 @@ namespace Spielzeugverleih.Controllers
             db.Conditions.Remove(condition);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        // GET: Conditions/RejectDelete
+        public ActionResult RejectDelete()
+        {
+            return View();
         }
 
         protected override void Dispose(bool disposing)

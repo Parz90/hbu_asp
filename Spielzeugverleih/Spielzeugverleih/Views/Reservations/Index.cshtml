@@ -27,10 +27,7 @@
             @Html.DisplayNameFor(model => model.To)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Pickup)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Return)
+            @Html.DisplayNameFor(model => model.State)
         </th>
         <th></th>
     </tr>
@@ -56,10 +53,7 @@
             @Html.DisplayFor(modelItem => item.To)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Pickup)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Return)
+            @Html.DisplayFor(modelItem => item.State)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ReservationId }) |

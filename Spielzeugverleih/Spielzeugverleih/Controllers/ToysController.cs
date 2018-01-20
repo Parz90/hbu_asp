@@ -21,6 +21,11 @@ namespace Spielzeugverleih.Controllers
             return View(toys.ToList());
         }
 
+        public ActionResult NoCond()
+        {
+            return View();
+        }
+
         // GET: Toys/Details/5
         public ActionResult Details(int? id)
         {
@@ -37,8 +42,13 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Toys/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
+            if (db.Conditions.Count() == 0)
+            {
+                return RedirectToAction("NoCond");
+            }
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description");
             //ViewBag.ToyPicList = new SelectList(db.ToyPics, "ToyPicId", "Picture");
  
@@ -54,6 +64,7 @@ namespace Spielzeugverleih.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         //public ActionResult Create([Bind(Include = "ToyId,ConditionId,ArticleNr,files,Title,Description,Price,Active,Available")] Toy toy)
+        [Authorize(Roles = "Admin")]
         public ActionResult Create(Toy toy)
         {
             if (ModelState.IsValid)
@@ -93,6 +104,8 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Toys/Edit/5
+
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -104,6 +117,7 @@ namespace Spielzeugverleih.Controllers
             {
                 return HttpNotFound();
             }
+
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description", toy.ConditionId);
             return View(toy);
         }
@@ -113,7 +127,7 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Edit([Bind(Include = "ToyId,ConditionId,ArticleNr,files,Title,Description,Price,Active,Available")] Toy toy)
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(Toy toy)
         {
             if (ModelState.IsValid)
@@ -143,7 +157,16 @@ namespace Spielzeugverleih.Controllers
                     }
 
                 }
-                
+
+                // Not working at the moment!!!
+                //foreach (var item in toy.ToyPicList)
+                //{
+                //    if (item.Delete == true)
+                //    {
+                //        db.ToyPics.Remove(item);
+                //    }
+                //}
+
                 db.Entry(toy).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -153,6 +176,7 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Toys/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -164,18 +188,34 @@ namespace Spielzeugverleih.Controllers
             {
                 return HttpNotFound();
             }
+            var reservations = db.Reservations.ToList();
+            foreach (var res in reservations)
+            {
+                if (res.ToyId == id)
+                {
+                    return RedirectToAction("RejectDelete");
+                }
+
+            }
             return View(toy);
         }
 
         // POST: Toys/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Toy toy = db.Toys.Find(id);
             db.Toys.Remove(toy);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        // GET: Toys/RejectDelete
+        public ActionResult RejectDelete()
+        {
+            return View();
         }
 
         protected override void Dispose(bool disposing)

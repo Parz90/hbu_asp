@@ -51,6 +51,7 @@ namespace Spielzeugverleih.Controllers
         */
 
         // GET: Reservations/Create
+        [Authorize]
         public ActionResult Create(int id)
         {
             List<Reservation> reservations = new List<Reservation>();
@@ -59,7 +60,7 @@ namespace Spielzeugverleih.Controllers
             {
                 if (res.ToyId == id)
                 {
-                    return RedirectToAction("Index", "Toys");
+                    return RedirectToAction("RejectReservation");
                 }
 
             }
@@ -69,12 +70,19 @@ namespace Spielzeugverleih.Controllers
 
             return View(reservation);
         }
+        // GET: Reservations/RejectReservations
+        public ActionResult RejectReservation()
+        {
+            return View();
+        }
+
 
         // POST: Reservations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "ReservationId,ToyId,ApplicationUserId,Description,From,To,Pickup,Return")] Reservation reservation)
         {
             if (ModelState.IsValid)
@@ -122,7 +130,7 @@ namespace Spielzeugverleih.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin")]
-        public ActionResult Edit([Bind(Include = "ReservationId,ToyId,ApplicationUserId,Description,From,To,Pickup,Return")] Reservation reservation)
+        public ActionResult Edit([Bind(Include = "ReservationId,ToyId,ApplicationUserId,Description,From,To,State")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {

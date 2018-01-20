@@ -11,25 +11,17 @@ namespace Spielzeugverleih.Models
     public class Reservation
     {
         public virtual int ReservationId { get; set; }
-        [DisplayName("Spielzeug")]
+        [DisplayName("Toy")]
         public virtual int ToyId { get; set; }
-        [DisplayName("Benutzer")]
+        [DisplayName("User")]
         [ForeignKey("ApplicationUser")]
         public virtual string ApplicationUserId { get; set; }
-        [DisplayName("Beschreibung")]
         public virtual string Description { get; set; }
-        [DisplayName("Von")]
         [DataType(DataType.Date)]
         public virtual DateTime From { get; set; }
-        [DisplayName("Bis")]
         [DataType(DataType.Date)]
         public virtual DateTime To { get; set; }
-        [DisplayName("Abholung")]
-        [DataType(DataType.Date)]
-        public virtual DateTime Pickup { get; set; }
-        [DisplayName("Rückgabe")]
-        [DataType(DataType.Date)]
-        public virtual DateTime Return { get; set; }
+        public virtual string State { get; set; }
         public virtual Toy Toy { get; set; }
 
 
