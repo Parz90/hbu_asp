@@ -55,15 +55,6 @@ namespace Spielzeugverleih.Controllers
         public ActionResult Create(int id)
         {
             List<Reservation> reservations = new List<Reservation>();
-            //reservations = db.Reservations.ToList();
-            //foreach (var res in reservations)
-            //{
-            //    if (res.ToyId == id)
-            //    {
-            //        return RedirectToAction("RejectReservation");
-            //    }
-
-            //}
             Reservation reservation = new Reservation();
             reservation.ToyId = db.Toys.Find(id).ToyId;
             reservation.ApplicationUserId = this.User.Identity.GetUserId();
@@ -89,15 +80,21 @@ namespace Spielzeugverleih.Controllers
             {
                 var From = reservation.From;
                 var To = reservation.To;
-                var toyReservation = db.Reservations.Where(r => r.ToyId == reservation.ToyId).FirstOrDefault();
-                if ((reservation.From > toyReservation.From && reservation.From < toyReservation.To) || (reservation.To > toyReservation.From && reservation.To < toyReservation.To))
+                var currentReservations = db.Reservations.Where(r => r.ToyId == reservation.ToyId).ToList();
+                foreach (var item in currentReservations)
                 {
-                    return RedirectToAction("RejectReservation");
+                    if ((item.From >= reservation.From && item.From <= reservation.To) || 
+                        (item.To >= reservation.From && item.To <= reservation.To) || 
+                        (item.From <= reservation.From && item.To >= reservation.To))
+                    {
+                        return RedirectToAction("RejectReservation");
+                    }
                 }
+                reservation.State = "Reserved";
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Toys");
             }
 
             ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email", reservation.ApplicationUserId);
