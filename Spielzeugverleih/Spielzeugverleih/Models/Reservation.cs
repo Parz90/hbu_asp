@@ -17,9 +17,11 @@ namespace Spielzeugverleih.Models
         [ForeignKey("ApplicationUser")]
         public virtual string ApplicationUserId { get; set; }
         public virtual string Description { get; set; }
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime), Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public virtual DateTime From { get; set; }
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime), Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public virtual DateTime To { get; set; }
         public virtual string State { get; set; }
         public virtual Toy Toy { get; set; }

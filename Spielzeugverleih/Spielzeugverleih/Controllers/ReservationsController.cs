@@ -55,15 +55,15 @@ namespace Spielzeugverleih.Controllers
         public ActionResult Create(int id)
         {
             List<Reservation> reservations = new List<Reservation>();
-            reservations = db.Reservations.ToList();
-            foreach (var res in reservations)
-            {
-                if (res.ToyId == id)
-                {
-                    return RedirectToAction("RejectReservation");
-                }
+            //reservations = db.Reservations.ToList();
+            //foreach (var res in reservations)
+            //{
+            //    if (res.ToyId == id)
+            //    {
+            //        return RedirectToAction("RejectReservation");
+            //    }
 
-            }
+            //}
             Reservation reservation = new Reservation();
             reservation.ToyId = db.Toys.Find(id).ToyId;
             reservation.ApplicationUserId = this.User.Identity.GetUserId();
@@ -88,13 +88,12 @@ namespace Spielzeugverleih.Controllers
             if (ModelState.IsValid)
             {
                 var From = reservation.From;
-                var toylist = db.Reservations.Where(r => r.ToyId == reservation.ToyId).ToList();
-                var reservedToy = toylist.Where(t => t.From > reservation.From && t.To < reservation.To);
-                /*if (reservedToy != null && reservedToy.Any())
+                var To = reservation.To;
+                var toyReservation = db.Reservations.Where(r => r.ToyId == reservation.ToyId).FirstOrDefault();
+                if ((reservation.From > toyReservation.From && reservation.From < toyReservation.To) || (reservation.To > toyReservation.From && reservation.To < toyReservation.To))
                 {
-                    db.Reservations.Add(reservation);
-                    db.SaveChanges();
-                }*/
+                    return RedirectToAction("RejectReservation");
+                }
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
 
