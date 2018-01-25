@@ -50,8 +50,6 @@ namespace Spielzeugverleih.Controllers
                 return RedirectToAction("NoCond");
             }
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description");
-            //ViewBag.ToyPicList = new SelectList(db.ToyPics, "ToyPicId", "Picture");
- 
             ViewBag.PictureList = new List<ToyPic>(db.ToyPics.ToList());
             ViewBag.MultiSelectPictureList = new MultiSelectList(db.ToyPics.ToList(), "ToyPicId", "Picture");
 
@@ -63,7 +61,6 @@ namespace Spielzeugverleih.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        //public ActionResult Create([Bind(Include = "ToyId,ConditionId,ArticleNr,files,Title,Description,Price,Active,Available")] Toy toy)
         [Authorize(Roles = "Admin")]
         public ActionResult Create(Toy toy)
         {
@@ -97,9 +94,8 @@ namespace Spielzeugverleih.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description", toy.ConditionId);
-            //ViewBag.ToyPicList = new SelectList(db.ToyPics, "ToyPicId", "Picture", toy.ToyPicListId);
+
             return View(toy);
         }
 
@@ -117,8 +113,8 @@ namespace Spielzeugverleih.Controllers
             {
                 return HttpNotFound();
             }
-
             ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description", toy.ConditionId);
+
             return View(toy);
         }
 

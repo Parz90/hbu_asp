@@ -41,16 +41,6 @@ namespace Spielzeugverleih.Controllers
         }
 
         // GET: Reservations/Create
-        /*public ActionResult Create()
-        {
-            ViewBag.Username = this.User.Identity.GetUserName();
-            ViewBag.ApplicationUserId = new SelectList(db.Users, "Id", "Email");
-            ViewBag.ToyId = new SelectList(db.Toys, "ToyId", "ArticleNr");
-            return View();
-        }
-        */
-
-        // GET: Reservations/Create
         [Authorize]
         public ActionResult Create(int id)
         {

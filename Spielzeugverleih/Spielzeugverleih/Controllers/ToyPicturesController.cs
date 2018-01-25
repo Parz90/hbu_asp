@@ -20,20 +20,6 @@ namespace Spielzeugverleih.Controllers
         // GET: ToyPictures
         public ActionResult Index()
         {
-            /*
-            List<ToyPic> toys = new List<ToyPic>();
-
-            foreach (var item in db.ToyPictures)
-            {
-                ToyPic toy = new ToyPic();
-                MemoryStream ms = new MemoryStream(item.Picture);
-                Image ret = Image.FromStream(ms);
-                toy.Picture = ret;
-                toy.ToyPicId = item.ToyPictureId;
-                toy.ImagePath = item.ImagePath;
-                toys.Add(toy);
-            }
-            */
             return View(db.ToyPics.ToList());
         }
 
@@ -72,7 +58,6 @@ namespace Spielzeugverleih.Controllers
                     MemoryStream target = new MemoryStream();
                     file.InputStream.CopyTo(target);
                     toyPicture.Picture = target.ToArray();
-                    //toyPicture.ImagePath = Path.GetFileName(file.FileName);
 
                     db.ToyPics.Add(toyPicture);
                     db.SaveChanges();

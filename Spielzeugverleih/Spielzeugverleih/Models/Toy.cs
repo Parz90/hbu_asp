@@ -20,7 +20,6 @@ namespace Spielzeugverleih.Models
         [DisplayName("Price/Day")]
         public virtual decimal Price { get; set; }
         public virtual bool Active { get; set; }
-
         public virtual Condition Condition { get; set; }
         [DisplayName("Pictures")]
         public virtual ICollection<ToyPic> ToyPicList { get; set; }

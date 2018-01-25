@@ -16,6 +16,7 @@ namespace Spielzeugverleih.Models
         [DisplayName("User")]
         [ForeignKey("ApplicationUser")]
         public virtual string ApplicationUserId { get; set; }
+        [DisplayName("Comments")]
         public virtual string Description { get; set; }
         [DataType(DataType.DateTime), Required]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]

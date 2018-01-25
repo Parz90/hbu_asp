@@ -12,16 +12,9 @@ namespace Spielzeugverleih.Models
         public virtual int ToyPicId { get; set; }
         [DisplayName("Toy ID")]
         public virtual int ToyId { get; set; }
-
-
         public virtual byte[] Picture { get; set; }
-
         [NotMapped]
         public virtual bool Delete { get; set; }
-
-        //[DisplayName("Upload File")]
-        //public string ImagePath { get; set; }
-
         public virtual Toy Toy { get; set; }
     }
 }
