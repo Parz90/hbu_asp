@@ -77,6 +77,5 @@ C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\Spielzeugverleih\Spielzeugverleih\bi
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\Spielzeugverleih\Spielzeugverleih\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\Spielzeugverleih\Spielzeugverleih\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\Spielzeugverleih\Spielzeugverleih\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\Spielzeugverleih\Spielzeugverleih\obj\Debug\Spielzeugverleih.csprojResolveAssemblyReference.cache
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\Spielzeugverleih\Spielzeugverleih\obj\Debug\Spielzeugverleih.dll
 C:\Users\HP ENVY\Wichtige Daten\HFU\ASP.NET\Spielzeugverleih\Spielzeugverleih\obj\Debug\Spielzeugverleih.pdb

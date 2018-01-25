@@ -49,10 +49,12 @@
                         {
                             <td width="130px">
                                 <img height="100" width="100" src="data:image;base64,@Convert.ToBase64String(item.Picture)" />
+                                <br />
+                                @Html.ActionLink("delete", "DeleteToyPic", new { id = item.ToyId, toypicid = item.ToyPicId })
                             </td>
                         }
                     </tr>
-                    <tr>
+                    @*<tr>
                         @foreach (var item in Model.ToyPicList)
                         {
                             <td width="130px">
@@ -61,7 +63,7 @@
                                 @Html.CheckBoxFor(modelItem => item.Delete)
                             </td>
                         }
-                    </tr>
+                    </tr>*@
               </table>
             </div>
         </div>

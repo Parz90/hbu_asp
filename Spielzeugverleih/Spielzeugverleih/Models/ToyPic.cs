@@ -13,6 +13,7 @@ namespace Spielzeugverleih.Models
         [DisplayName("Toy ID")]
         public virtual int ToyId { get; set; }
         public virtual byte[] Picture { get; set; }
+
         [NotMapped]
         public virtual bool Delete { get; set; }
         public virtual Toy Toy { get; set; }

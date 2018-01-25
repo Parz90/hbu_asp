@@ -154,7 +154,7 @@ namespace Spielzeugverleih.Controllers
 
                 }
 
-                // Not working at the moment!!!
+                ////Not working at the moment!!!
                 //foreach (var item in toy.ToyPicList)
                 //{
                 //    if (item.Delete == true)
@@ -213,6 +213,29 @@ namespace Spielzeugverleih.Controllers
         {
             return View();
         }
+
+
+        [HttpGet]
+        public ActionResult DeleteToyPic(int id, int toypicid)
+        {
+            try
+            {
+                var toyPic = db.ToyPics.Single(x => x.ToyPicId == toypicid);
+                db.ToyPics.Remove(toyPic);
+                db.SaveChanges();
+                var toy = db.Toys.Include(y=>y.ToyPicList).Single(x => x.ToyId == id);
+
+                ViewBag.ConditionId = new SelectList(db.Conditions, "ConditionId", "Description", toy.ConditionId);
+
+                return View("Edit", toy);
+            }
+            catch(Exception exc)
+            {
+                Console.WriteLine("An error occurred: '{0}'", exc);
+                throw;
+            }
+        }
+
 
         protected override void Dispose(bool disposing)
         {
